@@ -3,7 +3,7 @@
     ViewBag.Title = "form";
 }
 
-<h2>form</h2>
+<h2>Student form</h2>
 
 <form action="/Home/form" method="post">
     <input type="text" name="Name" class="form-control" placeholder="Name" />
@@ -12,5 +12,11 @@
     @Html.ValidationMessage("Id", new { @class = "text-danger" })<br>
     <input type="text" name="Dob" class="form-control" placeholder="Dob" />
     @Html.ValidationMessage("Dob", new { @class = "text-danger" })<br>
+    <input type="text" name="password" class="form-control" placeholder="password" />
+    @Html.ValidationMessage("password", new { @class = "text-danger" })<br>
+    <input type="text" name="confirmpassword" class="form-control" placeholder="confirmpassword" />
+    @Html.ValidationMessage("confirmpassword", new { @class = "text-danger" })<br>
+    <input type="email" name="email" class="form-control" placeholder="email" />
+    @Html.ValidationMessage("email", new { @class = "text-danger" })<br>
     <input type="submit" value="submit" />
 </form>
