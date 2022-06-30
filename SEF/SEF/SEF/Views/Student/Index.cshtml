@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h1><a href="/Student/Create New">Create New</a></h1>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Fname</th>
+        <th>CGPA</th>
+    </tr>
+    @foreach(var d in Model)
+            {
+                <tr>
+                    <td>@d.ID</td>
+                    <td>@d.Name</td>
+                    <td>@d.Fname</td>
+                    <td>@d.CGPA</td>
+                    <td><a href="/Student/Add/@d.ID">Add</a></td>
+                    <td><a href="/Student/Delete/@d.ID">Delete</a></td>
+                </tr>
+            }
+</table>

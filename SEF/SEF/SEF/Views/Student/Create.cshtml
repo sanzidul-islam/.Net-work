@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Information</h2>
+@if (Model != null)
+{
+    <h1>@Model.Name</h1>
+}
+<form action="" method="post" >
+    
+    <label for="id">ID: </label>
+    <input type="text" name="ID" value="@(Model != null ? Model.ID : "")" class="form-control" />
+    @Html.ValidationMessage("ID", new { @class = "text-danger" })<br>
+    <label for="name">Name: </label>
+    <input type="text" name="Name" value="@(Model != null ? Model.Name : "")" class="form-control" />
+    @Html.ValidationMessage("Name", new { @class = "text-danger" })<br>
+    <label for="fname">First-name: </label>
+    <input type="text" name="Fname" value="@(Model != null ? Model.Fname : "")" class="form-control" />
+    @Html.ValidationMessage("Fname", new { @class = "text-danger" })<br>
+    <label for="cgpa">CGPA: </label>
+    <input type="text" name="CGPA" value="@(Model != null ? Model.CGPA : "")" class="form-control" />
+    @Html.ValidationMessage("CGPA", new { @class = "text-danger" })<br>
+    <input type="Submit" class="btn btn-success" />
+ 
+</form>
